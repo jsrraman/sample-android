@@ -1,14 +1,6 @@
-*.iml
-.idea/
-*.swp
-target/
-.DS_Store
-tmp/
-import-summary.txt
-local.properties
 .gradle
-build/
-dump.rdb
-
-# Appium specific files
-**/node_modules
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
