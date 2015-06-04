@@ -45,7 +45,8 @@ public class StudentDbUpdateTableMigration extends UpdateTableMigration<Student>
         // DO NOT create an instance of Update class inside UpdateTableMigration, as this will try to call
         // getDatabase recursively and we will end up in illegal state exception similar to the one
         // explained here - http://stackoverflow.com/questions/15955799/getdatabase-called-recursively
-        // Creating an instance of Update class outside this class is absolutely fine
+        // Creating an instance of Update class outside this class is absolutely fine. For reference
+        // check updateStudentDbData() of DbActivity
 //
 //        ConditionQueryBuilder<Student> whereConditionQueryBuilder = new ConditionQueryBuilder<>(Student.class,
 //                Condition.column(Student$Table.NICKNAME).is("NickName1"))
