@@ -17,7 +17,7 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name="com.rajaraman.androidsample.MainActivity_"
+            android:name="com.rajaraman.androidsample.ui.MainActivity_"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,9 +26,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.rajaraman.androidsample.TestActivity_"/>
+        <activity android:name="com.rajaraman.androidsample.ui.TestActivity_"/>
 
-        <activity android:name="com.rajaraman.androidsample.FBActivity_"/>
+        <activity android:name="com.rajaraman.androidsample.ui.FBActivity_"/>
+
+        <activity android:name="com.rajaraman.androidsample.ui.DbActivity_"/>
 
         <activity
             android:name="com.facebook.FacebookActivity"

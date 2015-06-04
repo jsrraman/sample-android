@@ -8,6 +8,8 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.URLSpan;
 import android.view.MotionEvent;
 
+import com.rajaraman.androidsample.ui.TestActivity_;
+
 public class CustomLinkMovementMethod extends LinkMovementMethod {
     private static String TAG = "CustomLinkMovementMethod";
 

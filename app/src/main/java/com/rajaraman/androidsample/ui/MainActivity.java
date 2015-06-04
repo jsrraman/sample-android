@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample;
+package com.rajaraman.androidsample.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
+import com.rajaraman.androidsample.CustomLinkMovementMethod;
+import com.rajaraman.androidsample.R;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -135,6 +137,12 @@ public class MainActivity extends Activity {
     @Click(R.id.main_button_fb)
     public void onClickFBButton(View view) {
         Intent intent = new Intent(this, FBActivity_.class);
+        startActivity(intent);
+    }
+
+    @Click(R.id.main_button_db)
+    public void onClickDbButton(View view) {
+        Intent intent = new Intent(this, DbActivity_.class);
         startActivity(intent);
     }
 }

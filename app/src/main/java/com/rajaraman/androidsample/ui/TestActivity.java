@@ -1,9 +1,11 @@
-package com.rajaraman.androidsample;
+package com.rajaraman.androidsample.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.rajaraman.androidsample.R;
 
 import org.androidannotations.annotations.EActivity;
 
