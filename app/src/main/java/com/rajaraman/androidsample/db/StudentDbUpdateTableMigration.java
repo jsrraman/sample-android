@@ -66,5 +66,7 @@ public class StudentDbUpdateTableMigration extends UpdateTableMigration<Student>
     }
 }
 
+//// This class is for testing db migration. Uncomment and comment the above definition
+//// when you do not migration to happen while testing.
 //public class StudentDbUpdateTableMigration {
 //}
