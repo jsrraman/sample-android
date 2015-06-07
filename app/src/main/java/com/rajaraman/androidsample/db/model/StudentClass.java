@@ -1,20 +1,12 @@
 package com.rajaraman.androidsample.db.model;
 
 import com.raizlabs.android.dbflow.annotation.Column;
-import com.raizlabs.android.dbflow.annotation.ForeignKey;
-import com.raizlabs.android.dbflow.annotation.ForeignKeyReference;
-import com.raizlabs.android.dbflow.annotation.ModelContainer;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
-import com.raizlabs.android.dbflow.sql.builder.Condition;
-import com.raizlabs.android.dbflow.sql.language.Select;
 import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.raizlabs.android.dbflow.structure.container.ForeignKeyContainer;
-import com.rajaraman.androidsample.db.StudentDb;
+import com.rajaraman.androidsample.utils.AppConstants;
 
-import java.util.List;
-
-@Table(databaseName = StudentDb.NAME)
+@Table(databaseName = AppConstants.STUDENTS_DB_NAME)
 public class StudentClass extends BaseModel {
     @Column
     @PrimaryKey

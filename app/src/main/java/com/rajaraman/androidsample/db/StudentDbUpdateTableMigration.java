@@ -4,14 +4,13 @@ import com.noveogroup.android.log.Log;
 import com.raizlabs.android.dbflow.annotation.Migration;
 import com.raizlabs.android.dbflow.config.FlowManager;
 import com.raizlabs.android.dbflow.sql.builder.Condition;
-import com.raizlabs.android.dbflow.sql.builder.ConditionQueryBuilder;
-import com.raizlabs.android.dbflow.sql.language.Update;
 import com.raizlabs.android.dbflow.sql.migration.UpdateTableMigration;
 import com.rajaraman.androidsample.db.model.Student;
 import com.rajaraman.androidsample.db.model.Student$Table;
+import com.rajaraman.androidsample.utils.AppConstants;
 
 // Use this migration for updating existing table
-@Migration(version = StudentDb.VERSION, databaseName = StudentDb.NAME)
+@Migration(version = AppConstants.STUDENTS_DB_VERSION, databaseName = AppConstants.STUDENTS_DB_NAME)
 public class StudentDbUpdateTableMigration extends UpdateTableMigration<Student> {
 
     // You need to have
@@ -23,7 +22,7 @@ public class StudentDbUpdateTableMigration extends UpdateTableMigration<Student>
     public void onPreMigrate() {
         super.onPreMigrate();
 
-        int dbVersion = FlowManager.getDatabase(StudentDb.NAME).getDatabaseVersion();
+        int dbVersion = FlowManager.getDatabase(AppConstants.STUDENTS_DB_NAME).getDatabaseVersion();
 
         switch (dbVersion) {
 

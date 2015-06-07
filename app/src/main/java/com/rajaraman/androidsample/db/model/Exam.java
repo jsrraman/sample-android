@@ -10,12 +10,12 @@ import com.raizlabs.android.dbflow.sql.builder.Condition;
 import com.raizlabs.android.dbflow.sql.language.Select;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 import com.raizlabs.android.dbflow.structure.container.ForeignKeyContainer;
-import com.rajaraman.androidsample.db.StudentDb;
+import com.rajaraman.androidsample.utils.AppConstants;
 
 import java.util.List;
 
 @ModelContainer
-@Table(databaseName = StudentDb.NAME)
+@Table(databaseName = AppConstants.STUDENTS_DB_NAME)
 public class Exam extends BaseModel {
     @Column
     @PrimaryKey

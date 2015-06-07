@@ -6,9 +6,9 @@ import com.raizlabs.android.dbflow.annotation.ForeignKeyReference;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.rajaraman.androidsample.db.StudentDb;
+import com.rajaraman.androidsample.utils.AppConstants;
 
-@Table(databaseName = StudentDb.NAME)
+@Table(databaseName = AppConstants.STUDENTS_DB_NAME)
 public class Student extends BaseModel {
     @Column
     @PrimaryKey

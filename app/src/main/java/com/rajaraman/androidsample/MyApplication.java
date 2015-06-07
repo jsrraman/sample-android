@@ -1,6 +1,7 @@
 package com.rajaraman.androidsample;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.facebook.FacebookSdk;
 import com.facebook.stetho.Stetho;
@@ -9,10 +10,18 @@ import com.raizlabs.android.dbflow.config.FlowManager;
 
 public class MyApplication extends Application {
 
+    private static Context context;
+
+    public static Context getContext() {
+        return context;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
         Log.d("onCreate");
+
+        context = getApplicationContext();
 
         // Facebook SDK intialization
         FacebookSdk.sdkInitialize(getApplicationContext());
