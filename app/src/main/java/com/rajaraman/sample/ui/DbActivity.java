@@ -1,27 +1,14 @@
-package com.rajaraman.androidsample.ui;
+package com.rajaraman.sample.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.raizlabs.android.dbflow.config.FlowManager;
-import com.raizlabs.android.dbflow.sql.builder.Condition;
-import com.raizlabs.android.dbflow.sql.builder.ConditionQueryBuilder;
-import com.raizlabs.android.dbflow.sql.language.Delete;
-import com.raizlabs.android.dbflow.sql.language.Select;
-import com.raizlabs.android.dbflow.sql.language.Update;
-import com.rajaraman.androidsample.R;
-import com.rajaraman.androidsample.db.StudentDbManager;
-import com.rajaraman.androidsample.db.model.Exam;
-import com.rajaraman.androidsample.db.model.Student;
-import com.rajaraman.androidsample.db.model.Student$Table;
-import com.rajaraman.androidsample.utils.AppConstants;
-import com.rajaraman.androidsample.utils.AppUtil;
+import com.rajaraman.sample.R;
+import com.rajaraman.sample.db.StudentDbManager;
 
 import org.androidannotations.annotations.EActivity;
-
-import java.util.List;
 
 @EActivity(R.layout.activity_db)
 public class DbActivity extends Activity {
@@ -30,8 +17,8 @@ public class DbActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AppUtil.deleteDb(AppConstants.STUDENTS_DB_NAME);
-//        StudentDbManager.getInstance().createDbData();
+//        AppUtil.deleteDb(AppConstants.STUDENTS_DB_NAME);
+        StudentDbManager.getInstance().createDbData();
     }
 
     @Override

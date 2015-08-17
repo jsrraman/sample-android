@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sz_transparent">#00000000</color>
+    <color name="app_bg_color">#FFFFFF</color>
+    <color name="sz_pink_color">#FFED0972</color>
+    <color name="sz_pink_color_disabled">#40ED0972</color>
+    <color name="sz_light_pink_color">#50ED0972</color>
+    <color name="sz_dark_pink_color">#FFCC0C4D</color>
+    <color name="sz_blue">#FF477AB9</color>
+    <color name="sz_grey">#FF757575</color>
+    <color name="sz_grey_tab_icons">#333333</color>
+    <color name="sz_light_green">#7ED321</color>
+    <color name="sz_green">#009688</color>
+    <color name="sz_host_weekend_date">#F3F3F3</color>
+    <color name="sz_disabled_view">#27000000</color>
+    <color name="sz_transparent_black">#CC000000</color>
+    <color name="sz_transparent_black_bm_guest">#AA000000</color>
+    <color name="default_white_color">#FFFFFFFF</color>
+    <color name="default_black">#FF000000</color>
+    <color name="smooth_black_bg">#CC000000</color>
+    <color name="sz_dark_white">#FFFAFAFA</color>
+
+    <color name="dos_donts_marker_color">#FF979797</color>
+    <color name="sz_host_disabled_date">#47000000</color>
+    <color name="sort_by_grey_color">#FF5C5C5C</color>
+    <color name="light_grey">#FF5C5C5C</color>
+    <color name="sz_light_white">#FFF7F8F9</color>
+    <color name="sz_light_grey">#78000000</color>
+    <color name="sz_orange">#D94444</color>
+    <color name="sz_yellow">#FFF5A623</color>
+    <color name="sz_red">#FFD0021B</color>
+    <color name="locked_view_overlay">#bb000000</color>
+    <color name="disabled_amenities_color">#7F7F7F7F</color>
+
+    <!-- pink bottom button selector colors-->
+    <color name="selector_default_state">@color/sz_pink_color</color>
+    <color name="selector_pressed_state">@color/sz_blue</color>
+
+    <!-- Calendar button selector colors-->
+    <color name="selector_calendar_default_state">@color/default_white_color</color>
+    <color name="selector_calendar_pressed_state">@color/sz_blue</color>
+
+    <!-- Filter FAB Button-->
+    <color name="fab_button_color">@color/sz_pink_color</color>
+    <color name="fab_pressed_highlight">@color/sz_dark_pink_color</color>
+
+    <!--Chat-->
+    <color name="chat_bg_color">#F1F1F1</color>
+    <color name="chat_detail_user_chat_text_color">#FFFFFF</color>
+    <color name="chat_detail_user_time_text_color">#87FFFFFF</color>
+    <color name="chat_detail_hotel_chat_text_color">#000000</color>
+    <color name="chat_detail_hotel_time_text_color">#87000000</color>
+    <color name="chat_user_list_item_read_text_color">#8C000000</color>
+    <color name="chat_user_list_item_unread_text_color">#E6000000</color>
+    <color name="chat_user_list_item_chat_text_color">#40000000</color>
+    <color name="chat_conversation_sendmessage_bg">#F3F3F3</color>
+
+    <!--Others-->
+    <color name="hint_text_color">#D5D6D8</color>
+
+    <!-- Chat Notifications -->
+    <color name="notf_text">#8C000000</color>
+    <color name="notf_subtext">#4D000000</color>
+
+    <!-- LYP -->
+    <color name="lyp_photo_upload_progress_bg">#0D000000</color>
+    <color name="lyp_photo_upload_progress_textcolor">#4D000000</color>
+
+    <!--Host screens-->
+    <color name="sz_host_background">#FF373C48</color>
+    <color name="sz_host_light_grey">#FFDADADA</color>
+
+    <!-- Booking Management-->
+    <color name="bm_confirm_layout_bg_color">#90000000</color>
+    <color name="bm_hotel_name_text_color">#D9000000</color>
+    <color name="bm_booking_date_text_color">#8C000000</color>
+    <color name="bm_booking_guest_text_color">#8C000000</color>
+    <color name="bm_booking_header_text_color">#8C000000</color>
+    <color name="bm_guest_order_id_text_color">#BFFFFFFF</color>
+    <color name="bm_guest_personalize_hint_text_color">#4D000000</color>
+    <color name="bm_guest_grey_bg">#F3F3F3</color>
+    <color name="bm_host_bg">#373C48</color>
+    <color name="bm_host_hotel_header_color">#D9FFFFFF</color>
+    <color name="bm_host_hotel_checkout_bg_color">#23A4F5</color>
+    <color name="bm_host_hotel_checkin_text_color">#bfffffff</color>
+    <color name="bm_guest_rating_bar_divider">#ACACAC</color>
+
+    <color name="toolbar_title_textcolor">#E6000000</color>
+
+</resources>

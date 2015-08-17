@@ -4,4 +4,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="facebook_app_id">718134391646160</string>
+    <string name="otp_verification_message">We have sent a 6 digit verification code to your mobile. Please enter it here.</string>
+    <string name="back">Back</string>
+    <string name="verify">Verify</string>
 </resources>

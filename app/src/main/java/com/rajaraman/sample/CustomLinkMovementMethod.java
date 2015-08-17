@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample;
+package com.rajaraman.sample;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.URLSpan;
 import android.view.MotionEvent;
 
-import com.rajaraman.androidsample.ui.TestActivity_;
+import com.rajaraman.sample.ui.TestActivity_;
 
 public class CustomLinkMovementMethod extends LinkMovementMethod {
     private static String TAG = "CustomLinkMovementMethod";

@@ -1,10 +1,10 @@
-package com.rajaraman.androidsample.db;
+package com.rajaraman.sample.db;
 
 import android.database.sqlite.SQLiteDatabase;
 
 import com.raizlabs.android.dbflow.annotation.Migration;
 import com.raizlabs.android.dbflow.sql.migration.BaseMigration;
-import com.rajaraman.androidsample.utils.AppConstants;
+import com.rajaraman.sample.utils.AppConstants;
 
 // This class is needed when you need to migrate after introducing a new table. Let this class
 // be there for DB migration, whenever a new table is added and version incremented, this would take

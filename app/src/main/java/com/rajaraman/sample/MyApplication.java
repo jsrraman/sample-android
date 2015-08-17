@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample;
+package com.rajaraman.sample;
 
 import android.app.Application;
 import android.content.Context;

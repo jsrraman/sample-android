@@ -1,0 +1,79 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Original Resource - Width and Height - Wrap Content" />
+
+        <ImageView
+            android:id="@+id/imageview_width_height_wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/material_deep_teal_200" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Width - Match Parent, Height - Wrap Content" />
+
+        <ImageView
+            android:id="@+id/imageview_height_wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@color/material_blue_grey_800" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Width - Match Parent, Height - Fixed, Transformation - No" />
+
+        <ImageView
+            android:id="@+id/imageview_height_fixed_01"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Width - Match Parent, Height - Fixed, Transformation - No" />
+
+        <ImageView
+            android:id="@+id/imageview_height_fixed_02"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Width - Match Parent, Height - Fixed, Transformation - Yes" />
+
+        <ImageView
+            android:id="@+id/imageview_height_fixed_transform_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Width - Match Parent, Height - Fixed, Transformation - Yes" />
+
+        <ImageView
+            android:id="@+id/imageview_height_fixed_transform_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+    </LinearLayout>
+</ScrollView>

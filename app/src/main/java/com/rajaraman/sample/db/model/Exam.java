@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample.db.model;
+package com.rajaraman.sample.db.model;
 
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.ForeignKey;
@@ -10,7 +10,7 @@ import com.raizlabs.android.dbflow.sql.builder.Condition;
 import com.raizlabs.android.dbflow.sql.language.Select;
 import com.raizlabs.android.dbflow.structure.BaseModel;
 import com.raizlabs.android.dbflow.structure.container.ForeignKeyContainer;
-import com.rajaraman.androidsample.utils.AppConstants;
+import com.rajaraman.sample.utils.AppConstants;
 
 import java.util.List;
 

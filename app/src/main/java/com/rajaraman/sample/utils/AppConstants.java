@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample.utils;
+package com.rajaraman.sample.utils;
 
 public class AppConstants {
     public static final String STUDENTS_DB_NAME = "Students";

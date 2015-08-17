@@ -1,11 +1,11 @@
-package com.rajaraman.androidsample.db;
+package com.rajaraman.sample.db;
 
 import com.noveogroup.android.log.Log;
 import com.raizlabs.android.dbflow.annotation.Migration;
 import com.raizlabs.android.dbflow.config.FlowManager;
 import com.raizlabs.android.dbflow.sql.migration.AlterTableMigration;
-import com.rajaraman.androidsample.db.model.Student;
-import com.rajaraman.androidsample.utils.AppConstants;
+import com.rajaraman.sample.db.model.Student;
+import com.rajaraman.sample.utils.AppConstants;
 
 // Use this migration for altering the existing table (only add column is allowed)
 // https://www.sqlite.org/omitted.html

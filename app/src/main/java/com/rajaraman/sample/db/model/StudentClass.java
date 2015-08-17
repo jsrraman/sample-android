@@ -1,10 +1,10 @@
-package com.rajaraman.androidsample.db.model;
+package com.rajaraman.sample.db.model;
 
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.rajaraman.androidsample.utils.AppConstants;
+import com.rajaraman.sample.utils.AppConstants;
 
 @Table(databaseName = AppConstants.STUDENTS_DB_NAME)
 public class StudentClass extends BaseModel {

@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample.db;
+package com.rajaraman.sample.db;
 
 import com.raizlabs.android.dbflow.annotation.Database;
 import com.raizlabs.android.dbflow.config.FlowManager;
@@ -7,10 +7,10 @@ import com.raizlabs.android.dbflow.sql.builder.ConditionQueryBuilder;
 import com.raizlabs.android.dbflow.sql.language.Delete;
 import com.raizlabs.android.dbflow.sql.language.Select;
 import com.raizlabs.android.dbflow.sql.language.Update;
-import com.rajaraman.androidsample.db.model.Exam;
-import com.rajaraman.androidsample.db.model.Student;
-import com.rajaraman.androidsample.db.model.Student$Table;
-import com.rajaraman.androidsample.utils.AppConstants;
+import com.rajaraman.sample.db.model.Exam;
+import com.rajaraman.sample.db.model.Student;
+import com.rajaraman.sample.db.model.Student$Table;
+import com.rajaraman.sample.utils.AppConstants;
 
 import java.util.List;
 

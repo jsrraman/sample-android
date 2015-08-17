@@ -19,7 +19,7 @@ apt {
         androidManifestFile variant.outputs[0].processResources.manifestFile
         // if you have multiple outputs (when using splits), you may want to have other index than 0
 
-        resourcePackageName 'com.rajaraman.androidsample'
+        resourcePackageName 'com.rajaraman.sample'
 
         // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
         // resourcePackageName android.defaultConfig.packageName
@@ -35,7 +35,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.rajaraman.androidsample"
+        applicationId "com.rajaraman.sample"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
@@ -62,7 +62,7 @@ repositories { mavenCentral() }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.facebook.android:facebook-android-sdk:4.0.0'
 
     apt "org.androidannotations:androidannotations:$AAVersion"
@@ -83,4 +83,6 @@ dependencies {
 
     // Parceler helper library for making a POJO parcelable
     compile 'org.parceler:parceler:0.2.16'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

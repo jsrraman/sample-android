@@ -1,15 +1,20 @@
-package com.rajaraman.androidsample.utils;
+package com.rajaraman.sample.utils;
 
 import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.ConnectivityManager;
 
 import com.noveogroup.android.log.Log;
-import com.raizlabs.android.dbflow.config.BaseDatabaseDefinition;
-import com.raizlabs.android.dbflow.config.FlowManager;
-import com.rajaraman.androidsample.MyApplication;
+import com.rajaraman.sample.MyApplication;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.parceler.apache.commons.lang.StringUtils;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,7 +75,6 @@ public class AppUtil {
     }
 
     public static void deleteDb(String dbName) {
-
         // Note:
         // As we are using DBFlow library for handling the sqlite, the proper way of deleting
         // the database will be to call FlowManager.getDatabase(database_name).reset() but that will
@@ -83,6 +87,43 @@ public class AppUtil {
             Log.d("Database " + dbName + " deleted successfully");
         } else {
             Log.d("Database " + dbName + " could not be deleted");
+        }
+    }
+
+    // Code to get \/ in your JSON string
+    public static void checkJsonObjectBehaviour() {
+        JSONObject reader = null;
+        String jsonString = "{\"PAYMENT_DETAILS\":\"abcd\\\\/efgh\"}";
+        String value;
+
+        try {
+            reader = new JSONObject(jsonString);
+        } catch (JSONException e) {
+            android.util.Log.d("error", "Exception->" + e.getMessage());
+        }
+
+        if (reader != null) {
+            try {
+                value = reader.getString("PAYMENT_DETAILS");
+            } catch (JSONException e) {
+                value = "";
+            }
+
+            android.util.Log.d("debug", value);
+        }
+    }
+
+    public static void getAddress(Context appContext) {
+        Geocoder geocoder = new Geocoder(appContext, Locale.getDefault());
+
+        try {
+            List<Address> addressList = geocoder.getFromLocationName("Kanyakumari", 1);
+//            List<Address> addressList = geocoder.getFromLocation(13.052414, 80.250825, 1);
+
+            int i = 0;
+            i += 1;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

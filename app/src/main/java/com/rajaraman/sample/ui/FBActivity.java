@@ -1,4 +1,4 @@
-package com.rajaraman.androidsample.ui;
+package com.rajaraman.sample.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,7 +22,7 @@ import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.rajaraman.androidsample.R;
+import com.rajaraman.sample.R;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -171,7 +171,6 @@ public class FBActivity extends Activity {
     }
 
     private void generateKeyHash(String packageName) {
-
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
                     packageName,
@@ -182,9 +181,7 @@ public class FBActivity extends Activity {
                 Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
         } catch (PackageManager.NameNotFoundException e) {
-
         } catch (NoSuchAlgorithmException e) {
-
         }
     }
 }
