@@ -1,5 +1,6 @@
 package com.rajaraman.sample.ui;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,13 +49,13 @@ public class OTPVerificationDialogActivity extends AppCompatActivity {
         super.onResume();
 
         // In Kitkat the top portion of the activity that is shown as dialog is cut
-        // so following patch is needed
+        // so following patch is needed (versions prior to KitKat did not have this issue)
         // Refer the issue as follows
         // http://stackoverflow.com/questions/20121711/dialog-on-android-kitkat-seems-to-be-cut
         // Though in the above link the combination of various other flags suggested the following
         // set of flags (referred from https://developer.android.com/training/system-ui/immersive.html)
         // are enough to avoid the top are cut
-        if (android.os.Build.VERSION.SDK_INT >= 16) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             int uiFlag = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                     | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                     | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
