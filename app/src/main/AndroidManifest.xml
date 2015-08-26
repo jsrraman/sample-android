@@ -35,7 +35,6 @@
         <activity android:name="com.rajaraman.sample.ui.ImageViewTestActivity_" />
         <activity android:name="com.rajaraman.sample.ui.TestActivity_" />
         <activity android:name="com.rajaraman.sample.ui.FBActivity_" />
-        <activity android:name="com.rajaraman.sample.ui.DbActivity_" />
 
         <activity
             android:name="com.facebook.FacebookActivity"

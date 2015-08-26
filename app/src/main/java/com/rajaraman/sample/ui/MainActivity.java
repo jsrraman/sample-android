@@ -104,12 +104,6 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    @Click(R.id.main_button_db)
-    public void onClickDbButton(View view) {
-        Intent intent = new Intent(this, DbActivity_.class);
-        startActivity(intent);
-    }
-
     @Click(R.id.main_button_dialog_activity)
     public void onClickDialogActivityButton(View view) {
         Intent intent = new Intent(this, OTPVerificationDialogActivity_.class);
