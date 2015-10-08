@@ -1,6 +1,8 @@
 package com.rajaraman.sample.ui;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -53,11 +55,14 @@ public class WebContentActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
 
         // Other web view settings to facilitate easy content consumption
-//        webSettings.setBuiltInZoomControls(true);
+        webSettings.setBuiltInZoomControls(true);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setSupportZoom(true);
         webSettings.setUseWideViewPort(true);
-//        webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NORMAL);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
+        }
 
         // Enable Javascript in web view
         webSettings.setJavaScriptEnabled(true);
