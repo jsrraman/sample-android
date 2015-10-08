@@ -7,4 +7,7 @@
     <string name="otp_verification_message">We have sent a 6 digit verification code to your mobile. Please enter it here.</string>
     <string name="back">Back</string>
     <string name="verify">Verify</string>
+    <string name="terms_and_conditions">Terms And Conditions</string>
+    <string name="terms_and_conditions_desc">I agree to terms and conditions, privacy policy and \n cancellation policy of Stayzilla.com</string>
+    <string name="loading">Loading ...</string>
 </resources>

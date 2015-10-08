@@ -2,12 +2,19 @@ package com.rajaraman.sample.ui;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.StyleSpan;
+import android.text.style.UnderlineSpan;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.facebook.CallbackManager;
@@ -17,13 +24,23 @@ import com.rajaraman.sample.R;
 import com.rajaraman.sample.utils.AppUtil;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.UiThread;
+import org.androidannotations.annotations.ViewById;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends Activity {
 
+    private static final String TERMS_AND_CONDITIONS_LINK = "http://stayzilla.com/terms";
+    private static final int TERMS_AND_CONDITIONS_START_SPAN = 11;
+    private static final int TERMS_AND_CONDITIONS_END_SPAN = 31;
+
     private CallbackManager callbackManager;
+
+    @ViewById(R.id.main_terms_and_conditions)
+    TextView termsAndConditionsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +54,7 @@ public class MainActivity extends Activity {
     protected void initViews() {
         showHtmlLinkInTextView();
         showCustomLinkToActivityInTextView();
+        AppUtil.setupTermsAndConditions(this, termsAndConditionsTextView);
     }
 
     private void showHtmlLinkInTextView() {
@@ -84,6 +102,26 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Click(R.id.button_lengthy_calc)
+    public void onClickLengthyCalc(View view) {
+        doLengthyCalc((Button) view);
+    }
+
+    @UiThread
+    public void updateLengthCalcButtonProperty(Button button) {
+        button.setText("Lengthy Operation Completed");
+    }
+
+    @Background
+    public void doLengthyCalc(Button button) {
+        try {
+            Thread.sleep(15 * 1000);
+            updateLengthCalcButtonProperty(button);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Click(R.id.main_button_edittext_test)

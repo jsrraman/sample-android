@@ -56,7 +56,7 @@ public class FBActivity extends Activity {
         setupAndHandleFBLogin();
 
         generateKeyHash("com.stayzilla.booking");
-        generateKeyHash("com.rajaraman.androidsample");
+        generateKeyHash("com.rajaraman.sample");
     }
 
     // Use this if you want to use your own login button to login to facebook

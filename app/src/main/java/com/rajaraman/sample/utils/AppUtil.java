@@ -1,12 +1,26 @@
 package com.rajaraman.sample.utils;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.ConnectivityManager;
+import android.support.v4.content.ContextCompat;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
+import android.view.View;
+import android.widget.TextView;
 
 import com.noveogroup.android.log.Log;
 import com.rajaraman.sample.MyApplication;
+import com.rajaraman.sample.R;
+import com.rajaraman.sample.ui.WebContentActivity_;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -125,5 +139,47 @@ public class AppUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void setupTermsAndConditions(final Activity activity, TextView textView) {
+        final int TERMS_AND_CONDITIONS_START_SPAN = 11;
+        final int TERMS_AND_CONDITIONS_END_SPAN = 31;
+
+        SpannableString termsAndConditions =
+                new SpannableString(activity.getString(R.string.terms_and_conditions_desc));
+
+        // Make the spannable text bold
+        termsAndConditions.setSpan(new StyleSpan(Typeface.BOLD), TERMS_AND_CONDITIONS_START_SPAN,
+                TERMS_AND_CONDITIONS_END_SPAN, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+        // Set the clickable action for the spannable text
+        termsAndConditions.setSpan(new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                showWebContent(activity, AppConstants.TERMS_AND_CONDITIONS_URL,
+                        activity.getString(R.string.terms_and_conditions));
+            }
+        }, TERMS_AND_CONDITIONS_START_SPAN, TERMS_AND_CONDITIONS_END_SPAN, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+        // Set the colour of spannable text
+        // Note: setSpan order is important. Here the link colour should be customized. So calling the
+        // ForegroundColorSpan as a last statement to get that effect. Had it been called before
+        // ClickableSpan then the default link color would have been set
+        termsAndConditions.setSpan(new ForegroundColorSpan(ContextCompat.getColor(activity,
+                        R.color.sz_pink_color)), TERMS_AND_CONDITIONS_START_SPAN,
+                TERMS_AND_CONDITIONS_END_SPAN, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+        textView.setText(termsAndConditions);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    public static void showWebContent(Activity activity, String urlToBeLoaded,
+                                      String backButtonString) {
+        Intent intent = new Intent(activity, WebContentActivity_.class);
+
+        intent.putExtra(AppConstants.INTENT_URL_TO_BE_LOADED, urlToBeLoaded);
+        intent.putExtra(AppConstants.INTENT_TITLE_STRING, backButtonString);
+
+        activity.startActivity(intent);
     }
 }
