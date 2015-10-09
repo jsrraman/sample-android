@@ -6,5 +6,6 @@ public class AppConstants {
     public static final String INTENT_URL_TO_BE_LOADED = "INTENT_URL_TO_BE_LOADED";
     public static final String INTENT_TITLE_STRING = "INTENT_TITLE_STRING";
 
+    public static final String MONEY_BACK_GURANTEE_FAQ = "http://stayzilla.com/money-back-guarantee-faq";
     public static final String TERMS_AND_CONDITIONS_URL = "http://stayzilla.com/terms";
 }
